@@ -44,7 +44,7 @@ jobs:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         docker build -t leonel1608/practice5:$NEW_VERSION .
-        docker build -t leoenl1608/practice5:latest .
+        docker build -t leoenl1608/practice5:v1 .
 
  # - explicación: Subir imagen al docker hub aplicando el parámetro NEW_VERSION
     - name: Push Docker Image
@@ -52,4 +52,4 @@ jobs:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         docker push leonel1608/practice5:$NEW_VERSION
-        docker push leonel1608/practice5:latest
+        docker push leonel1608/practice5:v1
