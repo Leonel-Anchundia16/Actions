@@ -43,13 +43,13 @@ jobs:
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker build -t pillligua24/prueba:$NEW_VERSION .
-        docker build -t pillligua24/prueba:latest .
+        docker build -t leonel1608/practice5:$NEW_VERSION .
+        docker build -t leoenl1608/practice5:latest .
 
  # - explicación: Subir imagen al docker hub aplicando el parámetro NEW_VERSION
     - name: Push Docker Image
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker push pillligua24/prueba:$NEW_VERSION
-        docker push pillligua24/prueba:latest
+        docker push leonel1608/practice5:$NEW_VERSION
+        docker push leonel1608/practice5:latest
