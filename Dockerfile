@@ -14,4 +14,4 @@ WORKDIR /app
 COPY --from=Build /app/dist ./dist
 COPY --from=Deps-Produ /app/node_modules ./node_modules
 ENV NODE_ENV='production'
-CMD [ "node", "dist/main"]
+CMD [ "node","dist/main"]
